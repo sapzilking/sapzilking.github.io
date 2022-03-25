@@ -23,7 +23,8 @@ name                     : "삽질왕"
 #description              : "공부 & 취미 블로그"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "sugil92/comments" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+#repository               : "sugil92/comments" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "https://sapzilking.github.io/" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -75,7 +76,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  "/assets/images/sapzil.jpeg" # Open Graph/Twitter default site image
+og_image                 :  "/assets/images/sapzil.jpg" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -95,15 +96,15 @@ analytics:
 author:
   name             : "삽질왕"
   avatar           : "https://user-images.githubusercontent.com/42318591/108615416-2e1bb580-7447-11eb-8a54-6338e53ce625.png"
-  bio              : "반갑습니다 :)"
+  #bio              : "반갑습니다 :)"
   #location         : "Seoul, South Korea"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:bboddak@gmail.com"
+      url: "privatesugil@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/sugil92"
+      url: "https://github.com/sapzilking"
     #- label: "Instagram"
     #  icon: "fab fa-fw fa-instagram"
     #  url: "https://instagram.com/06.25ash"
@@ -123,7 +124,7 @@ footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/sugil92"
+      url: "https://github.com/sapzilking"
     #- label: "Twitter"
     #  icon: "fab fa-fw fa-twitter-square"
       # url:
