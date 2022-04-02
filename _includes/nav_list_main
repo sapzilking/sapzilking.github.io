@@ -17,6 +17,16 @@
             {% endfor %}
         </ul>
       </li>
+      <li>
+        <span class="nav__sub-title">Spring</span>
+        <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "Spring" %}
+                    <li><a href="/categories/spring" class="">Spring ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+      </li>
       <li>	
             <br>      
             <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fsapzilking.github.io&count_bg=%23FFCC35&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false">
