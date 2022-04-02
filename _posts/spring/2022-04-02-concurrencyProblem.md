@@ -5,7 +5,7 @@ excerpt: "동시성 문제의 개념에 대해 알아보자"
 categories:
   - spring
 tags:
-  - [spring, 동시성 문제]
+  - [동시성 문제]
 
 toc: true
 toc_sticky: true
