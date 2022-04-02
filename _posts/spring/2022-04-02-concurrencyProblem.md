@@ -93,7 +93,7 @@ public class FieldServiceTest {
 
 위의 테스트의 실행결과 이다.  
 
-[](/images/img01.png)
+![img01](./images/img01.png)
 
 userB가 2번 조회 되었다.  
 thread-A는 userA를 저장했지만 조회해온 값은 userB가 조회 되었다.
