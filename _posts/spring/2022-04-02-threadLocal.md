@@ -93,7 +93,7 @@ public class ThreadLocalServiceTest {
 
 위의 테스트의 실행 결과이다.
 
-![img02](./images/img02.png)
+![img02](https://user-images.githubusercontent.com/93430103/161389488-1eb3ecba-6a91-40cb-8739-a232debd77e9.png)
 
 thread-A는 userA를, thread-B는 userB를 조회해 오는걸 볼 수 있다.  
 이 처럼 `쓰레드 로컬`을 사용하면 각 쓰레드마다 별도의 내부 저장소를 가지기 때문에,
