@@ -106,6 +106,7 @@ thread-A는 userA를, thread-B는 userB를 조회해 오는걸 볼 수 있다.
 아래의 예시를 보자.  
 
 사용자A 저장 요청 이미지
+![img03](https://user-images.githubusercontent.com/93430103/161391470-56a4b17e-cb1f-4c91-b949-59ae887bdc71.png)
 
 
 1. 사용자A가 저장 HTTP를 요청했다.
@@ -115,6 +116,7 @@ thread-A는 userA를, thread-B는 userB를 조회해 오는걸 볼 수 있다.
 5. 쓰레드 로컬의 `thread-A`전용 보관소에 사용자A 데이터를 보관한다.
 
 사용자A 저장 요청 종료 이미지
+![img04](https://user-images.githubusercontent.com/93430103/161391471-3b194e7c-a498-48ed-a9a4-3991fd40e1b8.png)
 
 1. 사용자A의 HTTP 응답이 끝난다.
 2. WAS는 사용이 끝난 thread-A 를 쓰레드 풀에 반환한다. 쓰레드를 생성하는 비용은 비싸기 때문에 쓰레드를 제거하지 않고, 보통 쓰레드 풀을 통해서 쓰레드를 재사용한다.
@@ -123,6 +125,7 @@ thread-A는 userA를, thread-B는 userB를 조회해 오는걸 볼 수 있다.
 
 사용자B 조회 요청
 이미지
+![img05](https://user-images.githubusercontent.com/93430103/161391473-e855f4fd-0004-4ff5-920c-ea8099f867d5.png)
 
 1. 사용자B가 조회를 위한 새로운 HTTP 요청을 한다.
 2. WAS는 쓰레드 풀에서 쓰레드를 하나 조회한다.
