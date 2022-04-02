@@ -18,11 +18,11 @@
         </ul>
       </li>
       <li>
-        <span class="nav__sub-title">Spring</span>
+        <span class="nav__sub-title">spring</span>
         <ul>
             {% for category in site.categories %}
-                {% if category[0] == "Spring" %}
-                    <li><a href="/categories/spring" class="">Spring ({{category[1].size}})</a></li>
+                {% if category[0] == "spring" %}
+                    <li><a href="/categories/spring" class="">spring ({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
