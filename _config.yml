@@ -96,7 +96,7 @@ analytics:
 author:
   name             : "삽질왕"
   avatar           : "https://user-images.githubusercontent.com/93430103/160277162-e366ae40-51f6-4703-8067-4b6d979cce51.jpeg"
-  bio              : "개발하면서 겪었던 삽질을 공유하는 공간입니다 :)"
+  #bio              : "개발하면서 겪었던 삽질을 공유하는 공간입니다 :)"
   #location         : "Seoul, South Korea"
   links:
     - label: "Email"
