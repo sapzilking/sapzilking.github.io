@@ -312,8 +312,6 @@ ContextV1 - resultTime=0
 ```
 `ContextV2`는 전략을 필드로 가지지 않는다. 대신에 전략을 `execute(..)`가 호출될 때 마다 항상 파라미터로 전달 받는다.
 
-<br>
-
 **ContextV2Test**  
 ```java
   @Slf4j
@@ -334,7 +332,6 @@ ContextV1 - resultTime=0
 클라이언트는 `Context`를 실행하는 시점에 원하는 `Strategy`를 전달할 수 있다. 따라서 이전 방식과 비교해서 원하는 전략을 더욱 유연하게 변경할 수 있다.  
 테스트 코드를 보면 하나의 `Context`만 생성한다. 그리고 하나의 `Context`에 실행 시점에 여러 전략을 인수로 전달해서 유연하게 실행하는 것을 확인할 수 있다.
 
-<br>
 
 **전략 패턴 파라미터 실행 그림**
 ![img12](https://user-images.githubusercontent.com/93430103/161977940-b703b596-77d0-4f3a-b034-556ecde3f389.png)
@@ -344,7 +341,6 @@ ContextV1 - resultTime=0
 3. Context 는 파라미터로 넘어온 strategy.call() 로직을 실행한다. 
 4. Context 의 execute() 로직이 종료된다.
 
-<br>
 
 **ContextV2Test - 추가**
 ```java
@@ -386,7 +382,6 @@ ContextV1 - resultTime=0
 ```
 람다를 사용해서 코드를 더 단순하게 만들 수 있다.
 
-<br>
 
 **정리**  
 * `ContextV1`은 필드에 `Strategy`를 저장하는 방식으로 전략 패턴을 구사했다.  
