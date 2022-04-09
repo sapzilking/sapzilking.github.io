@@ -1,7 +1,7 @@
 ---
 title: "Design"
 layout: archive
-permalink: categories/Design
+permalink: categories/Design-Patterns
 author_profile: true
 sidebar_main: true
 ---
@@ -10,5 +10,5 @@ sidebar_main: true
 
 ***
 
-{% assign posts = site.categories.Design %}
+{% assign posts = site.categories['Design Patterns'] %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

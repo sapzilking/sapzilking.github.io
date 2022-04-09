@@ -18,8 +18,8 @@
         </ul>
         <ul>
             {% for category in site.categories %}
-                {% if category[0] == "Design" %}
-                    <li><a href="/categories/Design" class="">Design ({{category[1].size}})</a></li>
+                {% if category[0] == "Design Patterns" %}
+                    <li><a href="/categories/design-patterns" class="">Design Patterns ({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
