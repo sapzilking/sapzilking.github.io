@@ -3,9 +3,9 @@ title:  "전략 패턴"
 excerpt: "전략 패턴에 대해 알아보자"
 
 categories:
-  - spring
+  - Design Patterns
 tags:
-  - [디자인 패턴, 전략 패턴]
+  - [전략 패턴]
 
 toc: true
 toc_sticky: true

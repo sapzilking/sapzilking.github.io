@@ -3,9 +3,9 @@ title:  "템플릿 메서드 패턴"
 excerpt: "템플릿 메서드 패턴에 대해 알아보자"
 
 categories:
-  - spring
+  - Design Patterns
 tags:
-  - [디자인 패턴, 템플릿 메서드 패턴]
+  - [템플릿 메서드 패턴]
 
 toc: true
 toc_sticky: true

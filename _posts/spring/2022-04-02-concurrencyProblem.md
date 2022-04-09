@@ -3,7 +3,7 @@ title:  "동시성 문제란?"
 excerpt: "동시성 문제의 개념에 대해 알아보자"
 
 categories:
-  - spring
+  - Spring
 tags:
   - [동시성 문제]
 

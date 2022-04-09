@@ -3,7 +3,7 @@ title:  "쓰레드 로컬"
 excerpt: "쓰레드 로컬을 이용하여 동시성 문제를 해결해 보자"
 
 categories:
-  - spring
+  - Spring
 tags:
   - [동시성 문제 해결, 쓰레드 로컬]
 
