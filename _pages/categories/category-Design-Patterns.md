@@ -1,7 +1,7 @@
 ---
 title: "Design"
 layout: archive
-permalink: categories/Design-Patterns
+permalink: categories/design-patterns
 author_profile: true
 sidebar_main: true
 ---
