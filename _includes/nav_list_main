@@ -16,6 +16,13 @@
                 {% endif %}
             {% endfor %}
         </ul>
+        <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "Design Patterns" %}
+                    <li><a href="/categories/Design Patterns" class="">java ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
         <span class="nav__sub-title">spring</span>
         <ul>
             {% for category in site.categories %}
