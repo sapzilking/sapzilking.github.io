@@ -19,7 +19,7 @@
         <ul>
             {% for category in site.categories %}
                 {% if category[0] == "Design Patterns" %}
-                    <li><a href="/categories/Design Patterns" class="">java ({{category[1].size}})</a></li>
+                    <li><a href="/categories/Design Patterns" class="">Design Patterns ({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
