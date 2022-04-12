@@ -32,6 +32,8 @@ last_modified_at: 2022-04-12
 
 <br>
 
+프록시 패턴을 이해하기 위한 예제 코드를 작성해보자. 먼저 프록시 패턴을 도입하기 전 코드를 아주 단순하게 만들어보자.
+
 ## 🔔 프록시 패턴 - 예제 코드1
 
 ![img08](https://user-images.githubusercontent.com/93430103/162958262-93e11f4d-39dd-44ae-a15c-6faca591c1e8.png)

@@ -160,7 +160,7 @@ DecoratorPatternClient - result=data
 ```
 MessageDecorator - MessageDecorator 실행
 RealComponent - RealComponent 실행
-MessageDecorator - MessageDecorator 꾸미기 적용 전=data, 적용 후=*****data***** 
+MessageDecorator - MessageDecorator 꾸미기 적용 전=data, 적용 후=*****data*****
 DecoratorPatternClient - result=*****data*****
 ```
 실행 결과를 보면 `MessageDecorator` 가 `RealComponent` 를 호출하고 반환한 응답 메시지를 꾸며서 반환한 것을 확인할 수 있다.
