@@ -142,6 +142,7 @@ thread-A는 userA를, thread-B는 userB를 조회해 오는걸 볼 수 있다.
 
 > 쓰레드 로컬을 모두 사용하고 나면 꼭 remove 메서드를 호출해서 쓰레드 로컬에 저장된 값을 제거해 주자!
 
+<br>
 
 [맨 위로 이동하기](#){: .btn .btn--primary }{: .align-right}
 <br>

@@ -119,5 +119,7 @@ thread-A는 userA를 저장했지만 조회해온 값은 userB가 조회 되었�
 다음시간에 이어서 알아보자.
 
 
+<br>
+
 [맨 위로 이동하기](#){: .btn .btn--primary }{: .align-right}
 <br>
