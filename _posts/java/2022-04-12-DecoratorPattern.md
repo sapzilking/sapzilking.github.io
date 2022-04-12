@@ -18,7 +18,7 @@ last_modified_at: 2022-04-12
 [🌜 [스프링 핵심원리 - 고급편]강의 들으러 가기!](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B3%A0%EA%B8%89%ED%8E%B8/dashboard){:target="_blank"}
 {: .notice--warning}
 
-지난 번에 알아본 [프록시패턴]()에 이어 오늘은 `데코레이터 패턴`에 대해 알아보자.
+지난 번에 알아본 [프록시패턴](https://sapzilking.github.io/design%20patterns/proxyPattern/)에 이어 오늘은 `데코레이터 패턴`에 대해 알아보자.
 
 데코레이터 패턴을 이해하기 위한 예제 코드를 작성해보자. 먼저 데코레이터 패턴을 도입하기 전 코드를 아주 단순하게 만들어보자.
 
@@ -91,7 +91,7 @@ last_modified_at: 2022-04-12
 RealComponent - RealComponent 실행 
 DecoratorPatternClient - result=data
 ```
-여기까지는 앞서 [프록시 패턴]() 에서 설명한 내용과 유사하고 단순해서 이해하는데 어려움은 없을 것이다.
+여기까지는 앞서 [프록시 패턴](https://sapzilking.github.io/design%20patterns/proxyPattern/) 에서 설명한 내용과 유사하고 단순해서 이해하는데 어려움은 없을 것이다.
 
 <br>
 
