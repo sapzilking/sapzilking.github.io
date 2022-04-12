@@ -19,7 +19,7 @@ last_modified_at: 2022-04-12
 {: .notice--warning}
 
 
-**GOF 디자인 패턴**
+**GOF 디자인 패턴**  
 둘다 프록시를 사용하는 방법이지만 GOF 디자인 패턴에서는 이 둘을 `의도(intent)` 에 따라서 프록시 패턴과 데코레이터 패턴으로 구분한다.  
 * 프록시 패턴: 접근 제어가 목적
 * 데코레이터 패턴: 새로운 기능 추가가 목적
@@ -29,6 +29,8 @@ last_modified_at: 2022-04-12
 데코레이터 패턴도 프록시를 사용한다.
 
 >**참고**: 프록시라는 개념은 클라이언트 서버라는 큰 개념안에서 자연스럽게 발생할 수 있다. 프록시는 객체안에서의 개념도 있고, 웹 서버에서의 프록시도 있다. 객체안에서 객체로 구현되어있는가, 웹 서버로 구현되어 있는가 처럼 규모의 차이가 있을 뿐 근본적인 역할은 같다.
+
+<br>
 
 ## 🔔 프록시 패턴 - 예제 코드1
 
@@ -44,6 +46,9 @@ public interface Subject {
       String operation();
 }
 ```
+예제에서 Subject 인터페이스는 단순히 operation() 메서드 하나만 가지고 있다.
+
+<br>
 
 **RealSubject**
 ```java
@@ -117,6 +122,7 @@ RealSubject - 실제 객체 호출
 
 이미 개발된 로직을 전혀 수정하지 않고, 프록시 객체를 통해서 캐시를 적용해보자.
 
+<br>
 
 ## 🔔 프록시 패턴 - 예제 코드2
 프록시 패턴을 적용하자.
@@ -126,7 +132,7 @@ RealSubject - 실제 객체 호출
 ![img11](https://user-images.githubusercontent.com/93430103/162960460-895d7bb7-2014-4fa5-858c-f43dcd914559.png)
 
 
-**ChcheProxy**
+**CacheProxy**
 ```java
   @Slf4j
   public class CacheProxy implements Subject {
@@ -153,6 +159,8 @@ RealSubject - 실제 객체 호출
 
 * `private Subject target` : 클라이언트가 프록시를 호출하면 프록시가 최종적으로 실제 객체를 호출해야 한다. 따라서 내부에 실제 객체의 참조를 가지고 있어야 한다. 이렇게 프록시가 호출하는 대상을 `target` 이라 한다.
 * `operation()` : 구현한 코드를 보면 `cacheValue` 에 값이 없으면 실제 객체(`target`) 를 호출해서 값을 구한다. 그리고 구한 값을 `cacheValue` 에 저장하고 반환한다. 만약 `cacheValue` 에 값이 있으면 실제 객체를 전혀 호출하지 않고, 캐시 값을 그대로 반환한다. 따라서 처음 조회 이후에는 캐시(`cacheValue`) 에서 매우 빠르게 데이터를 조회할 수 있다.
+
+<br>
 
 **ProxyPatternTest - cacheProxyTest() 추가**
 ```java
@@ -205,6 +213,7 @@ CacheProxy - 프록시 호출
 프록시 패턴의 핵심은 `RealSubject` 코드와 클라이언트 코드를 전혀 변경하지 않고, 프록시를 도입해서 접근 제어를 했다는 점이다.  
 그리고 클라이언트 코드의 변경 없이 자유롭게 프록시를 넣고 뺄 수 있다. 실제 클라이언트 입장에서는 프록시 객체가 주입되었는지, 실제 객체가 주입되었는지 알지 못한다.
  
+<br>
 
 [맨 위로 이동하기](#){: .btn .btn--primary }{: .align-right}
 <br>
