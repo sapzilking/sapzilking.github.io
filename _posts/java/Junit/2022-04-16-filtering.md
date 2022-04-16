@@ -1,11 +1,11 @@
 ---
-title:  "" 
-excerpt: ""
+title:  "테스트" 
+excerpt: "테스트중"
 
 categories:
   - JUnit
 tags:
-  - []
+  - [test]
 
 toc: true
 toc_sticky: true
