@@ -1,5 +1,5 @@
 ---
-title:  "인터페이스 기반, 구체 클래스 기반 프록시 적용" 
+title:  "인터페이스 기반, 구체 클래스 기반 프록시 " 
 excerpt: "다양한 상황에서 프록시를 적용해보자."
 
 categories:
@@ -153,8 +153,10 @@ public class OrderRepositoryInterfaceProxy implements OrderRepositoryV1 {
         TraceStatus status = null;
         try {
             status = logTrace.begin("OrderRepository.request()");
+
             //target 호출
             target.save(itemId);
+            
             logTrace.end(status);
         } catch (Exception e) {
             logTrace.exception(status, e);
@@ -178,8 +180,10 @@ public class OrderServiceInterfaceProxy implements OrderServiceV1 {
         TraceStatus status = null;
         try {
             status = logTrace.begin("OrderService.orderItem()");
+            
             //target 호출
             target.orderItem(itemId);
+            
             logTrace.end(status);
         } catch (Exception e) {
             logTrace.exception(status, e);
@@ -202,8 +206,10 @@ public class OrderControllerInterfaceProxy implements OrderControllerV1 {
         TraceStatus status = null;
         try {
             status = logTrace.begin("OrderController.request()");
+
             //target 호출
             String result = target.request(itemId);
+            
             logTrace.end(status);
             return result;
         } catch (Exception e) {
@@ -220,7 +226,6 @@ public class OrderControllerInterfaceProxy implements OrderControllerV1 {
 ```
 
 `noLog()` 메서드는 로그를 남기지 않아야 한다. 따라서 별도의 로직 없이 단순히 `target` 을 호출하면 된다.
-`
 
 **AppV1Config (프록시 적용 전 Configuration)** 
 ```java
@@ -464,6 +469,7 @@ TimeDecorator 종료 resultTime=1
 지금까지 프록시를 사용해서 기존 코드를 변경하지 않고, 로그 추적기라는 부가 기능을 적용할 수 있었다.  
 그런데 문제는 프록시 클래스를 너무 많이 만들어야 한다는 점이다. 잘 보면 프록시 클래스가 하는 일은 `LogTrace` 를 사용하는 것인데, 그 로직이 모두 똑같다. 대상 클래스만 다를 뿐이다. 만약 적용해야 하는 대상 클래스가 100개라면 프록시 클래스도 100개를 만들어야한다.  
 프록시 클래스를 하나만 만들어서 모든 곳에 적용하는 방법은 없을까?  
+
 다음에는 동적 프록시 기술을 이용해서 이 문제를 해결해 보자.
 
 <br>
