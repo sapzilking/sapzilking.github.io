@@ -22,6 +22,7 @@ last_modified_at: 2022-04-20
 리플렉션 기술을 사용하면 클래스나 메서드의 메타정보를 동적으로 획득하고, 코드도 동적으로 호출할 수 있다.  
 여기서는 JDK 동적 프록시를 이해하기 위한 최소한의 리플랙션 기술을 알아보자.
 
+---
 
 ## 🔔 리플렉션이 필요한 상황
 **ReflectionTest**
@@ -78,6 +79,7 @@ log.info("result={}", result);
 
 > **참고**: 람다를 사용해서 공통화 하는 것도 가능하다. 여기서는 람다를 사용하기 어려운 상황이라 가정하자. 그리고 리플렉션 학습이 목적이니 리플렉션에 집중하자.
 
+---
 
 ### 🔔 리플렉션 적용 - 1
 **ReflectionTest - reflection1 추가**
@@ -139,6 +141,7 @@ private void dynamicCall(Method method, Object target) throws Exception {
     * `Method method` : 첫 번째 파라미터는 호출할 메서드 정보가 넘어온다. 이것이 핵심이다. 기존에는 메서드 이름을 직접 호출했지만, 이제는 `Method` 라는 메타정보를 통해서 호출할 메서드 정보가 동적으로 제공된다.
     * `Object target` : 실제 실행할 인스턴스 정보가 넘어온다. 타입이 `Object` 라는 것은 어떠한 인스턴스도 받을 수 있다는 뜻이다. 물론 `method.invoke(target)` 를 사용할 때 호출할 클래스와 메서드 정보가 서로 다르면 예외가 발생한다.
 
+<br>
 
 ## 🔔 정리
 정적인 `target.callA()` , `target.callB()` 코드를 리플렉션을 사용해서 `Method` 라는 메타정보로 추상화했다. 덕분에 공통 로직을 만들 수 있게 되었다.
