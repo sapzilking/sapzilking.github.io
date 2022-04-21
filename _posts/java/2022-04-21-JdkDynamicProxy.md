@@ -83,9 +83,9 @@ public interface InvocationHandler {
 }
 ```
 **제공되는 파라미터는 다음과 같다.**
-* Object proxy : 프록시 자신
-* Method method : 호출한 메서드
-* Object[] args : 메서드를 호출할 때 전달한 인수
+* `Object proxy` : 프록시 자신
+* `Method method` : 호출한 메서드
+* `Object[] args` : 메서드를 호출할 때 전달한 인수
 
 이제 구현 코드를 보자.
 
@@ -156,7 +156,8 @@ public class JdkDynamicProxyTest {
 TimeInvocationHandler - TimeProxy 실행
 AImpl - A 호출
 TimeInvocationHandler - TimeProxy 종료 resultTime=0
-JdkDynamicProxyTest - targetClass=class hello.proxy.jdkdynamic.code.AImpl JdkDynamicProxyTest - proxyClass=class com.sun.proxy.$Proxy1
+JdkDynamicProxyTest - targetClass=class hello.proxy.jdkdynamic.code.AImpl
+JdkDynamicProxyTest - proxyClass=class com.sun.proxy.$Proxy1
 ```
 출력 결과를 보면 프록시가 정상 수행된 것을 확인할 수 있다.
 
@@ -187,7 +188,6 @@ proxyClass=class com.sun.proxy.$Proxy2 //dynamicB
 ```
 
 ## 🔔 정리
-**정리**  
 예제를 보면 `AImpl` , `BImpl` 각각 프록시를 만들지 않았다. 프록시는 JDK 동적 프록시를 사용해서 동적으로 만들고 `TimeInvocationHandler` 는 공통으로 사용했다.  
 JDK 동적 프록시 기술 덕분에 적용 대상 만큼 프록시 객체를 만들지 않아도 된다. 그리고 같은 부가 기능 로직을 한번만 개발해서 공통으로 적용할 수 있다. 만약 적용 대상이 100개여도 동적 프록시를 통해서 생성하고, 각각 필요한 `InvocationHandler` 만 만들어서 넣어주면 된다.  
 결과적으로 프록시 클래스를 수 없이 만들어야 하는 문제도 해결하고, 부가 기능 로직도 하나의 클래스에 모아서 단일 책임 원칙(SRP)도 지킬 수 있게 되었다.
@@ -212,21 +212,12 @@ JDK 동적 프록시 없이 직접 프록시를 만들어서 사용할 때와 JD
 
 ![img34](https://user-images.githubusercontent.com/93430103/164451560-d640d244-a444-41ef-8c25-210c0e2cd62b.png)
 
+## 🔔 JDK 동적 프록시 - 한계
+JDK 동적 프록시는 인터페이스가 필수이다.  
+그렇다면 인터페이스 없이 클래스만 있는 경우에는 어떻게 동적 프록시를 적용할 수 있을까?  
+이것은 일반적인 방법으로는 어렵고 `CGLIB` 라는 바이트코드를 조작하는 특별한 라이브러리를 사용해야 한다.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+`CGLIB`에 대해서는 다음번에 이어서 알아보자.
 
 <br>
 
