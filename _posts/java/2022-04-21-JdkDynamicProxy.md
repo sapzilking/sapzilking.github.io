@@ -148,8 +148,8 @@ public class JdkDynamicProxyTest {
 
 * `new TimeInvocationHandler(target)` : 동적 프록시에 적용할 핸들러 로직이다.
 *  `Proxy.newProxyInstance(AInterface.class.getClassLoader(), new Class[]{AInterface.class}, handler)`
-  * 동적 프록시는 `java.lang.reflect.Proxy` 를 통해서 생성할 수 있다.
-  * 클래스 로더 정보, 인터페이스, 그리고 핸들러 로직을 넣어주면 된다. 그러면 해당 인터페이스를 기반으로 동적 프록시를 생성하고 그 결과를 반환한다.
+   * 동적 프록시는 `java.lang.reflect.Proxy` 를 통해서 생성할 수 있다.
+   * 클래스 로더 정보, 인터페이스, 그리고 핸들러 로직을 넣어주면 된다. 그러면 해당 인터페이스를 기반으로 동적 프록시를 생성하고 그 결과를 반환한다.
 
 **dynamicA() 출력 결과**
 ```
@@ -160,7 +160,6 @@ JdkDynamicProxyTest - targetClass=class hello.proxy.jdkdynamic.code.AImpl
 JdkDynamicProxyTest - proxyClass=class com.sun.proxy.$Proxy1
 ```
 출력 결과를 보면 프록시가 정상 수행된 것을 확인할 수 있다.
-
 
 ## 🔔 설명
 
